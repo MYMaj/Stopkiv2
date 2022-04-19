@@ -42,7 +42,6 @@ $(".controls > .save").click(function () {
 
 // update per inputs
 $("#inputs input").keyup(function () {
-  alert("Handler for .keyup() called.");
   var input = $(this).attr("id");
   var val = $(this).val();
   $("." + input).html(val);
