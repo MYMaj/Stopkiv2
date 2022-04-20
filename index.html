@@ -1,308 +1,234 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>	
-	<title>Generator stopek 2022</title>
-	<meta charset="UTF-8" />
-</head>
-
-<body>
-	<div id="app"></div>
-	<script src="src/index.js">
-	</script>
-		<div class="center">
-				<div class="logo" > 
-				<a href="https://fps-work.pl/">
-						<img src="https://fps-work.pl/wp-content/uploads/2019/03/FPS_Logo_bia%C5%82e_70_2.png" alt="LOGO Foreign" style="width:150px;height:auto; background-color: #3D306A;">
-					</a>
-					<a href="ttps://ggo.com.pl/">
-						<img src="https://ggo.com.pl/wp-content/uploads/2018/02/ggo_logo_v3.png" alt="LOGO GGO" style="width:150px;height:auto; background-color: #3AA7D2;">
-					</a>
-				</div>
-				<h2>Generator stopek</h2>
-				<ol>
-					<li>Wypełnij pola poniżej.</li>
-					<li>Następnie przejdź do instrukcji instalacji stopki w Outlook.</li>
-				</ol>
-			</div>
-			<div>
-			<h3>Twoje dane:</h3>
+   <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <title>Generator stopek 2022</title>
+      
+      <meta charset="UTF-8" />
+   </head>
+   <body>
+      <div id="app"></div>
+      <script src="src/index.js"></script>
+      <div class="center">
+            <h1 style="color:red">Wersja TESTOWA</h1>
+         <div class="logo" >
+            <a href="https://fps-work.pl/">
+            <img src="https://fps-work.pl/wp-content/uploads/2019/03/FPS_Logo_bia%C5%82e_70_2.png" alt="LOGO Foreign" style="width:150px;height:auto; background-color: #3D306A;">
+            </a>
+            <span>
+            <a href="https://ggo.com.pl/">
+            <img src="https://ggo.com.pl/wp-content/uploads/2018/02/ggo_logo_v3.png" alt="LOGO GGO" style="width:150px;height:auto; background-color: #3AA7D2;">
+            </a></span>
+         </div>
+         <h2>Jak zrobić stopkę?</h2>
+         <ol>
+            <li>Wypełnij pola </li>
+            <li>Kliknij przycisk "Kopiuj" </li>
+            <li>Wstaw stopkę do Outlook</li>
+         </ol>
+      </div>
+      <div>
+         <h3>1. Podaj swoje dane:</h3>
+         <div id='inputs'>
+            <table cellspacing="8px" cellpadding="2px" width="auto">
+               <tr>
+                  <td>
+                     <label for='name'style="color:#3D306A; font-family:Helvetica, Arial, sans-serif; font-size:20px; font-weight:bold; line-height:20px;"">Imię:</label>
+                  </td>
+                  <td>
+                     <input id='name'  placeholder='Twoje imię'></input>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <label for='surname' style="color:#3D306A; font-family:Helvetica, Arial, sans-serif; font-size:20px; font-weight:bold; line-height:20px;   ">Nazwisko:</label>
+                  </td>
+                  <td>
+                     <input id='surname' placeholder='Twoje nazwisko'></input>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <label for='position' style="color:#3D306A; font-family:Helvetica, Arial, sans-serif; font-size:20px; font-weight:bold; line-height:20px;   ">Stanowisko:</label>
+                  </td>
+                  <td>
+                     <input id='position' placeholder='Twoje stanowisko/Your Position'></input>
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="2">
+                     <p  style="color:#104e87; "> Stanowisko wpisz w języku polskim i angielskim. Np. Kierownik Operacji/Senior Operations Manager</p> </td>
+                  </td>
+                  </tr>
+               <tr>
+                  <td>
+                     <label for='departament' style="color:#3D306A; font-family:Helvetica, Arial, sans-serif; font-size:20px; font-weight:bold; line-height:20px;   ">Departament:</label>
+                  </td>
+                  <td>
+                     <input id='departament' placeholder="Dział Operacji/Operations Department"></input>
+                  </td>
+                  <tr>
+                     <td colspan="2">
+                        <p  style="color:#104e87; "> Dział wpisz w języku polskim i angielskim. Np. Dział Operacji/Operations Department  </p> </td>
+                     </td>
+                     </tr>
+               </tr>
+               <tr>
+                  <td>
+                     <label for='phone' style="color:#3D306A; font-family:Helvetica, Arial, sans-serif; font-size:20px; font-weight:bold; line-height:20px;   ">Telefon:</label>
+                  </td>
+                  <td>
+                     <input id='phone' placeholder='+48 123 456 789 '></input>
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <h3>2. Wygenerowane stopki:</h3>
+      <hr>         
+      <h3>Stopka Foreign:</h3>
+      
+      <div id='signature_2'>
+         <table cellspacing="0" cellpadding="0px;" id='signature_2'>
 			
-			<div id='inputs'>
-				<table>
-					<tr>
-						<td>
-							<label for='name'>Imię:</label> 
-						</td>
-						<td>
-							<input id='name' placeholder='Wpisz tutaj'></input>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<label for='surname'>Nazwisko:</label> 
-						</td>
-						<td>
-							<input id='surname' placeholder='Wpisz tutaj'></input>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<label for='position'>Stanowisko:</label>
-						</td>
-						<td>
-							<input id='position' placeholder='Wpisz tutaj'></input>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<label for='departament'>Departament:</label>
-						</td>
-						<td>
-							<input id='departament' placeholder="Np. Rekrutacja"></input>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<label for='phone'>Telefon:</label>
-						</td>
-						<td>
-							<input id='phone' placeholder='123456789 '></input>
-						</td>
-					</tr>
-				</table>
-			</div>
-			</div>
+			   <p style='margin:0cm;font-size:15px;font-family:"Calibri",sans-serif;'><span style="color:#1F497D;">Pozdrawiam,</span></p>
+            <p style='margin:0cm;font-size:15px;font-family:"Calibri",sans-serif;'><span class="name" style="color:#1F497D;">Imie Nazwisko </span> <span class="surname" style="color:#1F497D;"></span></p>
+               <table style="border: none;border-collapse:collapse;">
+                  <tbody>
+                   <tr>
+                     <td style="width:6.0cm;padding:0cm 5.4pt 0cm 5.4pt;">
+                        <img  img height="auto" width="220"   border="0" src="/src/grafiki/FPSLOGO.png" alt="LOGO Foreign" style="  background-color: none; margin-right: 0px;  margin-left: 0px;     ">
+                     </td>
+                       <td style="width: 318.65pt;padding: 0cm 5.4pt;vertical-align: top;">
+                        <span class="name" style="color:#3D306A; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; line-height:16px;   ">
+                           Imię Nazwisko
+                           </span>  <span class="surname" style="color:#3D306A; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; line-height:16px;   ">
+                              </span> 
+                           <br>
+                           <span class="position" style="color:#3D306A; font-family:Helvetica, Arial, sans-serif; font-size:14px; font-weight:bold; line-height:14px;">
+                           Stanowisko Pracy
+                           </span> 
+                           <br>
+                           <span class="departament" style="color:#3D306A; font-family:Helvetica, Arial, sans-serif; font-size:12px;   line-height:14px;">
+                           Departament w firmie
+                           </span> 
+                           <br>
+                                 <span style="display: inline-block; margin-right: 4px; color:#3D306A; font-weight: bold; font-size:12px;">mobile:</span>
+                                 <span class="phone" style="display: inline-block; margin-right: 4px; color:#3D306A; font-size:12px; ">
+                                 +48 123 456 789
+                                 </span>
+                                 <br>
+                                 <span style='white-space:nowrap'>
+                                 <span style="display: inline-block; margin-right: 2px; color:#3D306A; font-weight: bold; font-size:12px;">e-mail:</span>
+                                 <a class="email" href="mailto:imie.nazwisko@fps-work.pl" data-domain="fps-work.pl" style="display: inline-block; margin-right: 4px; color:#3D306A; font-size:12px;">
+                                 imie.nazwisko@fps-work.pl
+                                 </a>
+                                 </span><br>
+                                 <span style='white-space:nowrap'>
+                                 <span style="display: inline-block; margin-right: 2px; color:#3D306A; font-weight: bold; font-size:12px;">www:</span>
+                                 <a href="http://www.fps-work.pl" style="display: inline-block; margin-right: 4px; color:#3D306A; font-size:12px;">fps-work.pl</a>
+                                 </span><br>
+                        </td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" style="width: 488.75pt;padding: 0cm 5.4pt;vertical-align: top;">
+                     <p style='margin:0cm;font-size:15px;font-family:"Calibri",sans-serif;margin-top:7.5pt;'><strong><span style='font-size:11px;font-family:"Helvetica",sans-serif;color:#7F7F7F;'>Foreign Personnel Service sp. z o.o.,</span></strong><span style='font-size:11px;font-family:"Helvetica",sans-serif;color:#7F7F7F;'>&nbsp;ul. Wierzbowa 21/1, 90-227 Ł&oacute;dź | NIP: 951-239-23-21, KRS: 0000555722</span></p>
+                     <p style='margin:0cm;font-size:15px;font-family:"Calibri",sans-serif;text-align:justify;'><span style='font-size:11px;font-family:"Helvetica",sans-serif;color:#B9AEAE;'>The content of this email is confidential and intended for the recipient specified in message only. It is strictly forbidden to share any part of this message with any third party, without a written consent of the sender. If you received this message by mistake, please reply to this message and follow with its deletion, so that we can ensure such a mistake does not occur in the future.</span></p>
+                   </td>
+                  </tr>
+                     </tbody>
+                  </table>
+         </table>
+      </div>
+      <div class='controls' data-sig='signature_2'>
+            <button class='select signature_2' >Kopiuj stopkę</button><br>
+                     <!-- tutaj  <button class='save'>Pobierz kod HTML</button>
+            <a download='Foreign_stopka22.htm'>Save HTML to file</a> ->-->
+         </div>
+      <hr>         
+      
+      <div id='signature_3'>
+         <table cellspacing="0" cellpadding="0px;" id='signature_3'>
 			
-			<h3>Wygenerowane Twoje stopki:</h3>
-			
-		 
+			   <p style='margin:0cm;font-size:15px;font-family:"Calibri",sans-serif;'><span style="color:#1F497D;">Pozdrawiam,</span></p>
+            <p style='margin:0cm;font-size:15px;font-family:"Calibri",sans-serif;'><span class="name" style="color:#1F497D;">Imie Nazwisko </span> <span class="surname" style="color:#1F497D;"></span></p>
+               <table style="border: none;border-collapse:collapse;">
+                  <tbody>
+                   <tr>
+                     <td style="width:6.0cm;padding:0cm 5.4pt 0cm 5.4pt;">
+                        <img  img height="auto" width="220"   border="0" src="/src/grafiki/GGOLOGO.png" alt="LOGO Foreign" style="  background-color: none; margin-right: 0px;  margin-left: 0px;     ">
+                     </td>
+                       <td style="width: 318.65pt;padding: 0cm 5.4pt;vertical-align: center;">
+                        <span class="name" style="color:#104E87; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; line-height:16px;   ">
+                           Imię Nazwisko
+                           </span>  <span class="surname" style="color:#104E87; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; line-height:16px;   ">
+                              </span> 
+                           <br>
+                           <span class="position" style="color:#104E87; font-family:Helvetica, Arial, sans-serif; font-size:14px; font-weight:bold; line-height:14px;">
+                           Stanowisko Pracy
+                           </span> 
+                           <br>
+                           <span class="departament" style="color:#104E87; font-family:Helvetica, Arial, sans-serif; font-size:12px;   line-height:14px;">
+                           Departament w firmie
+                           </span> 
+                           <br>
+                                 <span style="display: inline-block; margin-right: 0px; color:#104E87; font-weight: bold; font-size:12px;"></span>
+                                 <br>
+                                 <span class="phone" style="display: inline-block; margin-right: 0px; color:#104E87; font-size:12px; ">
+                                 +48 123 456 789
+                                 </span>
+                                 
+                                 <span style='white-space:nowrap'>
+                                 <span style="display: inline-block; margin-right: 0px; color:#104E87; font-weight: bold; font-size:12px;"></span><br>
+                                 <a class="email" href="mailto:imie.nazwisko@ggo.com.pl" data-domain="ggo.com.pl" style="display: inline-block; margin-right: 4px; color:#104E87; font-size:12px;">
+                                 imie.nazwisko@ggo.com.pl
+                                 </a>
+                                 </span><br>
+                                 <span style='white-space:nowrap'>
+                                 <span style="display: inline-block; margin-right: -3px; color:#104E87; font-weight: bold; font-size:12px;"></span>
+                                 <a href="https://www.ggo.com.pl" style="display: inline-block; margin-right: 0px; color:#104E87; font-size:12px;">www.ggo.com.pl</a>
+                                 </span><br>
+                        </td>
+                    </tr>
+                  <tr>
+                    <td colspan="2" style="width: 488.75pt;padding: 0cm 5.4pt;vertical-align: top;">
+                     <p style='margin:0cm;font-size:15px;font-family:"Calibri",sans-serif;margin-top:7.5pt;'><strong><span style='font-size:11px;font-family:"Helvetica",sans-serif;color:#7F7F7F;'>Greygoose Outsourcing sp. z o.o.,</span></strong><span style='font-size:11px;font-family:"Helvetica",sans-serif;color:#7F7F7F;'>| ul. Żeligowskiego 3/5, 90-752 Łódź</span></p>
+                     <span style='margin:0cm;font-size:15px;font-family:"Calibri",sans-serif;margin-top:7.5pt;'><strong><span style='font-size:11px;font-family:"Helvetica",sans-serif;color:#7F7F7F;'>KRS: 0000569750 | NIP: 725-20-90-785 | REGON: 362164445</span></span>
+                     <p style='margin:0cm;font-size:15px;font-family:"Calibri",sans-serif;text-align:justify;'><span style='font-size:11px;font-family:"Helvetica",sans-serif;color:#B9AEAE;'>The content of this email is confidential and intended for the recipient specified in message only. It is strictly forbidden to share any part of this message with any third party, without a written consent of the sender. If you received this message by mistake, please reply to this message and follow with its deletion, so that we can ensure such a mistake does not occur in the future.</span></p>
+                   </td>
+                  </tr>
+                     </tbody>
+                  </table>
+         </table>
+      </div>
+      <h3>Stopka Greygouse:</h3>
+      <div class='controls' data-sig='signature_3'>
+         <button class='select signature_3'>Kopiuj stopkę</button><br>
+                  <!-- tutaj  <button class='save'>Pobierz kod HTML</button>
+         <a download='Foreign_stopka22.htm'>Save HTML to file</a> ->-->
+      </div>
 			<hr>
-		<h3>Larger font:</h3>
-		
-		<div class='controls' data-sig='signature_1'>
-			<button class='select'>Select Signature (for Gmail)</button><br>
-			<button class='save'>Prepare HTML (for Outlook)</button>
-			<a download='NRG_signature.htm'>Save HTML to file</a>
-		</div>
-		
-		<div id='signature_1_container'>
-			<table cellspacing="0" cellpadding="0px;" id='signature_1'>
-				<tr>
-					<td rowspan=3 style="white-space: nowrap; padding: 10px 8px 0 0; border-right:solid 2px #93c0f8; text-align:right; line-height: 18px; width:99px; height:33px;">
-						<img src="http://pureenergies.com/us/files/2014/04/e-sig_PElogo.png"/>
-						<br>
-						<div style="color: #111; font-weight: 600; font-family:Helvetica, Arial, sans-serif; font-size:11px; padding-bottom: 10px;">
-						SOLAR &middot; LIGHTS &middot; PURE FUEL
-						</div>
-						<div style="color: #111; font-family:Helvetica, Arial, sans-serif; font-size:11px;">An NRG Home company</div>
-						<img src="http://pureenergies.com/us/files/2015/01/e-sig_NRGHSlogo.png"/>
-					</td>
-					<td style="padding-left:10px; color:#555; font-family:Helvetica, Arial, sans-serif; font-size:12px; line-height:16px; " >
-						<span class="name" style="color:#2781f2; font-weight:bold;">
-							Anakin Skywalker
-						</span><br>
-						<span class="position">
-							Force Specialist
-						</span>
-						<br>
-						<span style="display: inline-block; margin-right: 4px; color:#2781f2; font-weight: bold;">t</span>
-						<span class="phone">
-							(888) 777-7777
-						</span>
-						<span style="display: inline-block; margin: 0 3px; color:#2781f2; font-weight: bold;">m</span>
-						<span class="cell">
-							(888) 333-3333
-						</span>
-						<br>
-						<span style="display: inline-block; margin-right: 4px; color:#2781f2; font-weight: bold;">f</span>
-						<span class="fax">
-							(888) 666-6666
-						</span>
-						<br>
-						<span style='white-space:nowrap'>
-							<span style="display: inline-block; margin-right: 2px; color:#2781f2; font-weight: bold;">e</span>
-							<a class="email" href="mailto:vader@pureenergies.com" style="color: #555; text-decoration:none;">
-								vader@pureenergies.com
-							</a>
-						</span><br>
-						<span style='white-space:nowrap'>
-							<span style="display: inline-block; margin-right: 2px; color:#2781f2; font-weight: bold;">w</span>
-							<a href="http://www.pureenergies.com" style="font-family: Helvetica, Arial; line-height: 18px; color: #555; text-decoration:none;">http://www.pureenergies.com</a>
-						</span><br>
-		
-						<!-- Social media links -->
-						<div style='margin-top: 4px'>
-							<a style="width:20px; height: 20px;" href="https://twitter.com/pureenergiesUS"><img alt="Twitter" src="http://pureenergies.com/us/files/2014/04/twitter.png" /></a>
-		
-							<a style="width:20px; height: 20px;" href="https://www.facebook.com/pureenergies"><img alt="Facebook" src="http://pureenergies.com/us/files/2014/04/fb.png"/></a>
-		
-							<a style="width:20px; height: 20px;" href="https://www.linkedin.com/company/pure-energies"><img alt="LinkedIn" src="http://pureenergies.com/us/files/2014/04/linkedin.png"/></a>
-		
-							<a style="width: 20px; height: 20px;" href="https://plus.google.com/105035082847538286780/posts"><img alt="Google+" src="http://pureenergies.com/us/files/2014/04/google.png"/></a>
-		
-							<a style="width: 20px; height: 20px;" href="http://www.youtube.com/user/oneblockoffthegrid"><img alt="YouTube" src="http://pureenergies.com/us/files/2014/04/youtube.png"/></a>
-		
-							<a style="width: 20px; height: 20px;" href="http://www.pinterest.com/pureen/"><img alt="Pinterest" src="http://pureenergies.com/us/files/2014/04/pinterest.png"/></a>
-						</div>
-					</td>
-				</tr>
-			</table>
-		</div>
-		
-	
-		<hr>
-		<h3>Larger font:</h3>
-		<div class='controls' data-sig='signature_3'>
-				<button class='select'>Zaznacz całość</button><br>
-				<button class='save'>Pobierz kod HTML</button>
-				<a download='NRG_signature.htm'>Save HTML to file</a>
-			</div>
-		
-			<div id='signature_3_container'>
-			
-				<table cellspacing="0" cellpadding="0px;" id='signature_3'>
-			 
-				  
-						<tr>
-							 <td>
-							<p  style="color:#104e87; "> Pozdrawiam </p>
-							<span class="name"  style="color:#104e87; ">    Imię Nazwisko   </span>
-						</td>
-						</tr>
-		 
-							<tr>
-						<td rowspan=2 style="   text-align:left; ">
-							<img  img height="auto" width="220"   border="0" src="/src/grafiki/FPSLOGO.png" alt="LOGO Foreign" style="  background-color: none; margin-right: 0px;  margin-left: 0px;     ">
-						</td>
-						<td style="padding-left:10px; color:#555;  line-height:16px; text-align:left; " >
-							<span class="name" style="color:#3D306A; font-family:Helvetica, Arial, sans-serif; font-size:20px; font-weight:bold; line-height:20px;   ">
-								Imię Nazwisko
-							</span><br>
-							<span class="position" style="color:#3D306A; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; line-height:20px;">
-								Stanowisko Pracy
-							</span>
-							<br>
-							<span class="departament" style="color:#3D306A; font-family:Helvetica, Arial, sans-serif; font-size:15px; font-weight:bold;  line-height:14px;">
-									Departament w firmie
-								</span>
-
-							
-						</td>
-					</tr>
-					<tr>
-				 
-								<td style="padding-left:10px; color:#555;  line-height:16px; text-align:left; " >
-										<br>
-							<span style="display: inline-block; margin-right: 4px; color:#3D306A; font-weight: bold; font-size:14px;">mobile:</span>
-							<span class="phone" style="display: inline-block; margin-right: 4px; color:#3D306A; font-size:15px; ">
-								+48 123 456 789
-							</span>							
-							<br>
-							<span style='white-space:nowrap'>
-								<span style="display: inline-block; margin-right: 2px; color:#3D306A; font-weight: bold; font-size:14px;">e-mail:</span>
-								<a class="email" href="mailto:vader@pureenergies.com" style="display: inline-block; margin-right: 4px; color:#3D306A; font-size:15px;">
-									vader@pureenergies.com
-								</a>
-							</span><br>
-							<span style='white-space:nowrap'>
-								<span style="display: inline-block; margin-right: 2px; color:#3D306A; font-weight: bold; font-size:14px;">www:</span>
-								<a href="http://www.fps-work.pl" style="display: inline-block; margin-right: 4px; color:#3D306A; font-size:15px;">fps-work.pl</a>
-							</span><br>
-								</td>
-			 
-						<td style="padding-left:10px; color:#555;  line-height:16px; " >
-						
-						</td>
-					</tr>
-					<tr>
-						
-							<td colspan=3 style="padding-left:10px; color:#7F7F7F;  line-height:16px;  " >
-									<br>
-								<span style="display: inline-block; margin-right: 2px; color:#7F7F7F;  font-size:14px;"> <b>Foreign Personnel Service sp. z o.o.,</b> ul. Wierzbowa 21/1, 90-227 Łódź | NIP: 951-239-23-21, KRS: 0000555722</span>		
-								<br>
-								<span style="display: inline-block; margin-right: 2px; color:#B9AEAE;  font-size:14px;"> The content of this email is confidential and intended for the recipient specified in message only. It is strictly forbidden to share any part of this message with any third party, without a written consent of the sender. If you received this message by mistake, please reply to this message and follow with its deletion, so that we can ensure such a mistake does not occur in the future.</span>		
-								
-						</td>
-					</tr>
-				</tbody>
-				</table>
-			</div>
-			
-			<hr>
-			<h3>Instruckja instalacji:</h3>
-			<h4>Dodawanie do Outlook (2007 i nowszy):</h3>
-			
-			<div class='instructions'>
-				<ol>
-					<li>Prepare the signature file:</li>
-					<ol>
-						<li>Click "Prepare HTML" next to desired signature</li>
-						<li>Click "Save HTML to file"</li>
-						<li>Open your browser's download window (usually Ctrl+J on windows or Shift+Cmd+J on Mac)</li>
-						<li>Locate "NRG_signature.htm" in the list of recent downloads</li>
-						<li>Click "Show in Folder" (Chrome) or right-click and select "Open Containing Folder" (Firefox)</li>
-						<li>Keep this folder open (or make note of where the file is, you will need it in a few steps)</li>
-					</ol>
-			
-					<li>Create a blank signature in Outlook:</li>
-					<ol>
-						<li>Go to "Tools" menu and select "Options" (if you don't have a "Tools" menu, go to "File" -> "Options)</li>
-						<li>Go to "Mail Format" tab (alternatively, "Mail" option on the left)</li>
-						<li>Click "Signatures" button</li>
-						<li>Click "New" button</li>
-						<li>Enter <b>"NRG_signature"</b> for the name of your signature</li>
-						<li>Click "OK" to save the new signature</li>
-						<li>Click "OK" again to close signature editing window</li>
-						<li>Click "OK" again to close options window</li>    
-					</ol>
-					<li>Install our custom signature:</li>
-					Find Outlook signatures folder:
-					<ol>
-						<li>Click Start</li>
-						<li>In the "Run" input (it's normally the little input box at the bottom of start menu), enter "%APPDATA%" and hit "Enter" (alternatively, if you don't have that option in start menu you can start it with keyboard shortcut Windows+R)</li>
-						A folder should open. <i>If it didn't, try doing the same and entering "%APPDATA%\" into the input box.</i>
-						<li>In the folder that opened, if you have a "Microsoft" folder - open it. Otherwise, if you have "Roaming" folder - look in it, there should "Microsoft" folder in it.</li>
-						<li>In "Microsoft" folder, open "Signatures" folder".</li>
-						<li>Delete all files named "NRG_signature".</li>
-						<li>Copy the downloaded "NRG_signature.htm" file into that folder (from your downloads folder, should be open since step 1 of this guide).</li>
-					</ol>
-					<li>Set our custom signature as default:</li>
-					<ol>
-						<li>Go to "Tools" menu and select "Options" (if you don't have a "Tools" menu, go to "File" -> "Options)</li>
-						<li>Go to "Mail Format" tab (alternatively, "Mail" option on the left)</li>
-						<li>Click "Signatures" button</li>
-						<i>You should see your fancy new signature now.</i>
-						<li>On the right side of this window, under "Choose default signature" select "NRG_signature" in both "new messages" and "replys/forwards" dropdowns.</li>
-						<li>Click "OK" to save</li>
-						<li>Click "OK" again to close options window</li>
-					</ol>
-					<li>Test to make sure it works:</li>
-					<ol>
-						<li>Create a new email</li>
-						<li>Verify your fancy new signature is already included</li>
-						<li>Rejoice!</li>
-					</ol>
-				</ol>
-				Here are a couple of video walkthroughs of these steps: <a target='_blank' href='https://www.youtube.com/watch?v=0qvJzNeL0tk'>one</a> and <a target='_blank' href='https://www.youtube.com/watch?v=d1CNxuRKNs8'>two</a>.
-			</div>
-			<h4>Adding the signature to Gmail:</h3>
-			<div class='instructions'>
-				<ol>
-					<li>Click "Select this signature" next to desired one</li>
-					<li>Copy with Ctrl+C (or Cmd+C on Mac)</li>
-					<li>In your gmail, click the rotary icon (right below profile picture)</li>
-					<li>Click "settings" from drop-down menu</li>
-					<li>Scroll down to "Signature" section</li>
-					<li>Click in the text editor box for signature</li>
-					<li>Paste with Ctrl+V (or Cmd+V on Mac), or right-click -> "Paste"</li>
-					<li>Scroll to the bottom of the page and click "Save"</li>
-					<li>Click "Compose" to verify your new signature works.</li>
-				</ol>
-				<p>Below is a quick gif that illustrates the steps above.</p>
-				<img src='http://i.imgur.com/DH82U74.gif'>
-			</div>
-</body>
-
+      <h3>Instruckja instalacji w Outlook:</h3>
+      <h4>
+      Dodawanie do Outlook (2020 i nowszy):</h3>
+      <div class='instructions'>
+         <ol>
+            <li>Instruckja dla Windows 10</li>
+            <ol>
+               <li>Sprawdź, czy dane wygenerowane w stopce są prawidłowe</li>
+               <li>Kliknij przycisk Kopiuj przy wybranej stopce</li>
+               <li>Uruchom program Outlook</li>
+               <li>Kliknij "Nowa Wiadomość"</li>
+               <li>Kliknij "Podpis", a następnie "Podpisy"</li>
+               <li>Wpisz nazwę dla swojego podpisu</li>
+               <li>Kliknij przycisk "Nowa"</li>
+               <li>Kliknij prawym przyciskiem myszy na puste pole</li>
+               <li>Wybierz "Opcje wklejania", a następnie "Zachowaj formatowanie źródłowe"</li>
+               <li>Kliknij OK</li>
+               <li>Kliknij OK w oknie stopek</li>
+               <li>Gotowe</li>
+            </ol>
+            
+      
+   </body>
 </html>

@@ -1,3 +1,4 @@
+import jQuery from "jquery";
 import "./styles.css";
 
 document.getElementById("app").innerHTML = `
@@ -7,26 +8,26 @@ document.getElementById("app").innerHTML = `
 </div>
 `;
 
-function SelectText(element) {
-  var doc = document;
-  var text = doc.getElementById(element);
-  if (doc.body.createTextRange) {
-    // ms
-    var range = doc.body.createTextRange();
-    range.moveToElementText(text);
-    range.select();
-  } else if (window.getSelection) {
-    var selection = window.getSelection();
-    range = doc.createRange();
-    range.selectNodeContents(element);
+const $ = jQuery;
+
+function selectText(elementId) {
+  const node = document.getElementById(elementId);
+  const selection = window.getSelection();
+  const range = document.createRange();
+  range.selectNodeContents(node);
+  selection.removeAllRanges();
+  selection.addRange(range);
+  var ok = document.execCommand("copy");
+  if (ok) {
+    $(`.select.${elementId}`).text("Skopiowano");
+    // $(`.select.${elementId}`).style.background = "#3BC14A";
     selection.removeAllRanges();
-    selection.addRange(range);
   }
 }
 
 $(".controls > .select").click(function () {
-  var signature_id = $($(this).parents(".controls")[0]).data("sig");
-  SelectText($("#" + signature_id)[0]);
+  var signatureId = $(this).parent().data("sig");
+  selectText(signatureId);
 });
 
 $(".controls > .save").click(function () {
@@ -45,9 +46,24 @@ $("#inputs input").keyup(function () {
   var input = $(this).attr("id");
   var val = $(this).val();
   $("." + input).html(val);
-  if (input == "email") {
-    $(".email").attr("href", "mailto:" + val);
+
+  if (input === "name" || "surname") {
+    const name = $("#name").val();
+    const surname = $("#surname").val();
+    const email = `${name}.${surname}`.toLocaleLowerCase("en");
+
+    $(".email").each(function () {
+      const domain = $(this).data("domain") || "";
+      $(this).text(`${email}@${domain}`);
+      $(this).attr("href", `mailto:${email}@${domain}`);
+    });
   }
   $(".controls > a").hide();
   $(".controls > .save").show();
+});
+
+$(document).ready(function () {
+  $("#inputs input").keyup(function () {
+    $(this).attr("size", $(this).val().length);
+  });
 });
