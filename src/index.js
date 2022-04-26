@@ -1,12 +1,9 @@
 import jQuery from "jquery";
 import "./styles.css";
 
-document.getElementById("app").innerHTML = `
-<h1>Generator stopek 2022</h1>
-<div>
-   Na tej stronie znajdziesz informacje jak krok po kroku zainstalować piękną stopkę.
-</div>
-`;
+//document.getElementById("app").innerHTML = `
+
+//`;
 
 const $ = jQuery;
 

@@ -8,30 +8,42 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
    </head>
    <body>
-      <div id="app"></div>
-      <script src="src/index.js"></script>
-      <div class="center">
-            <h1 style="color:red">Wersja TESTOWA</h1>
-         <div class="logo" >
-            <a href="https://fps-work.pl/">
-            <img src="https://fps-work.pl/wp-content/uploads/2019/03/FPS_Logo_bia%C5%82e_70_2.png" alt="LOGO Foreign" style="width:150px;height:auto; background-color: #3D306A;">
-            </a>
-            <span>
-            <a href="https://ggo.com.pl/">
-            <img src="https://ggo.com.pl/wp-content/uploads/2018/02/ggo_logo_v3.png" alt="LOGO GGO" style="width:150px;height:auto; background-color: #3AA7D2;">
-            </a></span>
+      <header>
+         <div class = "wrapper"> 
+            <div class="crop">
+            <img  class="center2" src="/src/grafiki/FPS_podstrona.png" alt="LOGO Foreign" style="   background-position:center;"> 
+            </div>
          </div>
-         <h2>Jak zrobić stopkę?</h2>
-         <ol>
-            <li>Wypełnij pola </li>
-            <li>Kliknij przycisk "Kopiuj" </li>
-            <li>Wstaw stopkę do Outlook</li>
-         </ol>
-      </div>
-      <div>
+        <br>
+        <a href="https://fps-work.pl/">
+         <img src="https://fps-work.pl/wp-content/uploads/2019/03/FPS_Logo_bia%C5%82e_70_2.png" alt="LOGO Foreign" style="width:150px;height:auto; background-color: #3D306A;">
+         </a>
+         <span>
+         <a href="https://ggo.com.pl/">
+         <img src="https://ggo.com.pl/wp-content/uploads/2018/02/ggo_logo_v3.png" alt="LOGO GGO" style="width:150px;height:auto; padding-top: 10px; background-color: #3AA7D2;">
+         </a></span>
+         
+         
+         </div>
+      </header>
+      <script src="src/index.js"></script>
+            <h1 style="color:red">Wersja TESTOWA</h1>
+            <h1>Generator stopek 2022</h1>
+            <div style="text-align: center;">
+               Na tej stronie znajdziesz informacje jak krok po kroku zainstalować piękną stopkę.
+            </div>
+            <div style="text-align: center;">
+               <h3>Jak zrobić stopkę?</h3>
+                  <ol >
+                      <li >Wypełnij pola </li>
+                     <li>Kliknij przycisk "Kopiuj" </li>
+                      <li>Wstaw stopkę do Outlook</li>
+                  </ol>
+             </div>
+         <div>
          <h3>1. Podaj swoje dane:</h3>
-         <div id='inputs'>
-            <table cellspacing="8px" cellpadding="2px" width="auto">
+         <div.parent id='inputs' >
+            <table class="center3" cellspacing="0" cellpadding="2px;" id='inputUser' >
                <tr>
                   <td>
                      <label for='name'style="color:#3D306A; font-family:Helvetica, Arial, sans-serif; font-size:20px; font-weight:bold; line-height:20px;"">Imię:</label>
@@ -50,7 +62,7 @@
                </tr>
                <tr>
                   <td>
-                     <label for='position' style="color:#3D306A; font-family:Helvetica, Arial, sans-serif; font-size:20px; font-weight:bold; line-height:20px;   ">Stanowisko:</label>
+                     <label for='position' style="color:#3D306A; font-family:Helvetica, Arial, sans-serif; font-size:20px; font-weight:bold; line-height:20px;   ">Stanowisko:*</label>
                   </td>
                   <td>
                      <input id='position' placeholder='Twoje stanowisko/Your Position'></input>
@@ -58,19 +70,19 @@
                </tr>
                <tr>
                   <td colspan="2">
-                     <p  style="color:#104e87; "> Stanowisko wpisz w języku polskim i angielskim. Np. Kierownik Operacji/Senior Operations Manager</p> </td>
+                     <p  style="color:#104e87; "> *Stanowisko wpisz w języku polskim i angielskim. Np. Kierownik Operacji/Senior Operations Manager</p> </td>
                   </td>
                   </tr>
                <tr>
                   <td>
-                     <label for='departament' style="color:#3D306A; font-family:Helvetica, Arial, sans-serif; font-size:20px; font-weight:bold; line-height:20px;   ">Departament:</label>
+                     <label for='departament' style="color:#3D306A; font-family:Helvetica, Arial, sans-serif; font-size:20px; font-weight:bold; line-height:20px;   ">Departament:*</label>
                   </td>
                   <td>
                      <input id='departament' placeholder="Dział Operacji/Operations Department"></input>
                   </td>
                   <tr>
                      <td colspan="2">
-                        <p  style="color:#104e87; "> Dział wpisz w języku polskim i angielskim. Np. Dział Operacji/Operations Department  </p> </td>
+                        <p  style="color:#104e87; "> *Dział wpisz w języku polskim i angielskim. Np. Dział Operacji/Operations Department  </p> </td>
                      </td>
                      </tr>
                </tr>
@@ -94,10 +106,11 @@
       <h3>Stopka Foreign:</h3>
       
       <div id='signature_2'>
+            
          <table cellspacing="0" cellpadding="0px;" id='signature_2'>
 			
-			   <p style='margin:0cm;font-size:15px;font-family:"Calibri",sans-serif;'><span style="color:#1F497D;">Pozdrawiam</span></p>
-            <p style='margin:0cm;font-size:15px;font-family:"Calibri",sans-serif;'><span class="name" style="color:#1F497D;">Imie Nazwisko </span> <span class="surname" style="color:#1F497D;"></span></p>
+			   <p style='margin:0cm;font-size:14,6px;font-family:"Calibri",sans-serif;'><span style="color:#1F497D;">Pozdrawiam</span></p>
+            <p style='margin:0cm;font-size:14,6px;font-family:"Calibri",sans-serif;'><span class="name" style="color:#1F497D;">Imie Nazwisko </span> <span class="surname" style="color:#1F497D;"></span></p>
                <table style="border: none;border-collapse:collapse;">
                   <tbody>
                    <tr>
@@ -105,52 +118,61 @@
                         <img  img height="auto" width="220"   border="0" src="/src/grafiki/FPSLOGO.png" alt="LOGO Foreign" style="  background-color: none; margin-right: 0px;  margin-left: 0px;     ">
                      </td>
                        <td style="width: 318.65pt;padding: 0cm 5.4pt;vertical-align: top;">
-                        <span class="name" style="color:#3D306A; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; line-height:16px;   ">
+                        <span class="name" style="color:#3D306A; font-family:Helvetica, Arial, sans-serif; font-size:21.28px; font-weight:bold; line-height:16px;   ">
                            Imię Nazwisko
-                           </span>  <span class="surname" style="color:#3D306A; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; line-height:16px;   ">
+                           </span>  <span class="surname" style="color:#3D306A; font-family:Helvetica, Arial, sans-serif; font-size:21.28px; font-weight:bold; line-height:16px;   ">
                               </span> 
                            <br>
-                           <span class="position" style="color:#3D306A; font-family:Helvetica, Arial, sans-serif; font-size:14px; font-weight:bold; line-height:14px;">
+                           <span class="position" style="color:#3D306A; font-family:Helvetica, Arial, sans-serif; font-size:13.3px; font-weight:bold; line-height:14px;">
                            Stanowisko Pracy
                            </span> 
                            <br>
-                           <span class="departament" style="color:#3D306A; font-family:Helvetica, Arial, sans-serif; font-size:12px;   line-height:14px;">
+                           <span class="departament" style="color:#3D306A; font-family:Helvetica, Arial, sans-serif; font-size:12px;   font-weight:normal; line-height:14px;">
                            
                            </span> 
                            <br>
-                                 <span style="display: inline-block; margin-right: 4px; color:#3D306A; font-weight: bold; font-size:12px;">mobile:</span>
+                           <p></p>
+                                 <span style="display: inline-block; margin-right: 4px; color:#3D306A; font-weight: bnormal; font-size:12px;">mobile:</span>
                                  <span class="phone" style="display: inline-block; margin-right: 4px; color:#3D306A; font-size:12px; ">
                                  +48 123 456 789
                                  </span>
                                  <br>
                                  <span style='white-space:nowrap'>
-                                 <span style="display: inline-block; margin-right: 2px; color:#3D306A; font-weight: bold; font-size:12px;">e-mail:</span>
+                                 <span style="display: inline-block; margin-right: 2px; color:#3D306A; font-weight: normal; font-size:12px;">e-mail:</span>
                                  <a class="email" href="mailto:imie.nazwisko@fps-work.pl" data-domain="fps-work.pl" style="display: inline-block; margin-right: 4px; color:#3D306A; font-size:12px;">
                                  imie.nazwisko@fps-work.pl
                                  </a>
                                  </span><br>
                                  <span style='white-space:nowrap'>
-                                 <span style="display: inline-block; margin-right: 2px; color:#3D306A; font-weight: bold; font-size:12px;">www:</span>
+                                 <span style="display: inline-block; margin-right: 2px; color:#3D306A; font-weight: normal; font-size:12px;">www:</span>
                                  <a href="http://www.fps-work.pl" style="display: inline-block; margin-right: 4px; color:#3D306A; font-size:12px;">fps-work.pl</a>
                                  </span><br>
                         </td>
                     </tr>
-                  <tr>
-                    <td colspan="2" style="width: 488.75pt;padding: 0cm 5.4pt;vertical-align: top;">
-                     <p style='margin:0cm;font-size:15px;font-family:"Calibri",sans-serif;margin-top:7.5pt;'><strong><span style='font-size:11px;font-family:"Helvetica",sans-serif;color:#7F7F7F;'>Foreign Personnel Service sp. z o.o.,</span></strong><span style='font-size:11px;font-family:"Helvetica",sans-serif;color:#7F7F7F;'>&nbsp;ul. Wierzbowa 21/1, 90-227 Ł&oacute;dź | NIP: 951-239-23-21, KRS: 0000555722</span></p>
-                     <p style='margin:0cm;font-size:15px;font-family:"Calibri",sans-serif;text-align:justify;'><span style='font-size:11px;font-family:"Helvetica",sans-serif;color:#B9AEAE;'>The content of this email is confidential and intended for the recipient specified in message only. It is strictly forbidden to share any part of this message with any third party, without a written consent of the sender. If you received this message by mistake, please reply to this message and follow with its deletion, so that we can ensure such a mistake does not occur in the future.</span></p>
+                  </tbody>
+               </table>
+                    <table>
+                     <tbody>
+                    <tr>
+                    <td colspan="2" style="width: 440pt; padding: 0cm 5.4pt;vertical-align: top; text-align:justify ">
+                    
+                     <p style='margin:0cm;font-size:11.5px;font-family:Helvetica, Arial, sans-serif;margin-top:7.5pt;'><strong><span style='font-size:11.5px;font-family:Helvetica, Arial, sans-serif;color:#7F7F7F;'>Foreign Personnel Service sp. z o.o.,</span></strong><span style='font-size:11.5px;font-family:Helvetica, Arial, sans-serif;color:#7F7F7F;'>&nbsp;ul. Wierzbowa 21/1, 90-227 Ł&oacute;dź | NIP: 951-239-23-21, KRS: 0000555722</span></p>
+                     <p><p
+                     <p style='margin:0cm;font-size:11.5px;font-family:Helvetica, Arial, sans-serif;text-align:justify;'><span style='font-size:11.5px;font-family:Helvetica, Arial, sans-serif;color:#B9AEAE;'>The content of this email is confidential and intended for the recipient specified in message only. It is strictly forbidden to share any part of this message with any third party, without a written consent of the sender. If you received this message by mistake, please reply to this message and follow with its deletion, so that we can ensure such a mistake does not occur in the future.</span></p>
                    </td>
                   </tr>
                      </tbody>
                   </table>
          </table>
+        
       </div>
-      
       <div class='controls' data-sig='signature_2'>
             <button class='select signature_2' >Kopiuj stopkę</button><br>
                      <!-- tutaj  <button class='save'>Pobierz kod HTML</button>
             <a download='Foreign_stopka22.htm'>Save HTML to file</a> ->-->
          </div>
+     
+   
       <hr>         
       <h3>Stopka Greygoose:</h3>
       <div id='signature_3'>
@@ -216,8 +238,9 @@
 			<hr>
       <h3>Instrukcja instalacji w Outlook:</h3>
       <h4>
-      Dodawanie do Outlook (2020 i nowszy):</h3>
-      <div class='instructions'>
+            <div style="text-align: center;">
+         Dodawanie do Outlook (2020 i nowszy):</h3>
+      <div>
          <ol>
             <li>Instruckja dla Windows 10</li>
             <ol>
@@ -234,7 +257,8 @@
                <li>Kliknij OK w oknie stopek</li>
                <li>Gotowe</li>
             </ol>
-            
+         </div>
+         <div>  
       
    </body>
 </html>

@@ -21,6 +21,12 @@ hr + h3 {
 h3 {
   color: #3d306a;
   font-size: 25px;
+  text-align: center;
+}
+h1 {
+  color: #3d306a;
+  font-size: 40px;
+  text-align: center;
 }
 
 .controls {
@@ -32,7 +38,7 @@ h3 {
 .controls .save,
 .controls a {
   border: none;
-  background: #3781f2;
+  background: #ff5b5b;
   color: #fff;
   cursor: pointer;
   font-family: Helvetica;
@@ -44,20 +50,15 @@ h3 {
   background: green;
   display: none;
 }
+
 h4 {
   text-decoration: underline;
 }
 
 .center {
-  position: static;
-  display: contents;
-  height: auto;
-  width: auto;
-  left: 50%;
-  top: 50%;
-  margin-top: 20px;
-  margin-left: 150px;
-  background-color: none;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
 }
 
 .logo {
@@ -70,4 +71,36 @@ h4 {
   margin-top: 20px;
   margin-left: 150px;
   background-color: none;
+  text-align: center;
+}
+
+.crop {
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: -100px;
+  object-fit: cover;
+  object-position: 30% 40%;
+  vertical-align: middle;
+}
+
+.center2 {
+  display: block;
+  margin-left: auto;
+
+  width: 100%;
+}
+
+div.parent {
+  text-align: center;
+  left: 50%;
+}
+ol {
+  display: inline-block;
+  text-align: left;
+}
+
+table.center3 {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
 }
