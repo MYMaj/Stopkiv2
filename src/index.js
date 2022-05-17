@@ -22,23 +22,29 @@ function selectText(elementId) {
   }
 }
 
+// Funkcja przycisku kopiuj
 $(".controls > .select").click(function () {
   var signatureId = $(this).parent().data("sig");
   selectText(signatureId);
 });
 
+// Funkcja zapisz plik do HTML
 $(".controls > .save").click(function () {
   var link = $(this).siblings("a")[0];
-  var sig_div = $(
-    "#" + $(this).parents(".controls").data("sig") + "_container"
-  );
+
+  var sig_div = $("#" + $(this).parents(".controls").data("sig"));
   var sig_html = $(sig_div).html();
-  $(link).attr("href", "data:text/html, " + sig_html);
+  console.log(sig_div);
+  //$(link).attr("href", "data:text/html, " + sig_html + ";charset=utf-8,");
+  $(link).attr(
+    "href",
+    "data:text/html, charset=ISO-8859-1;" + encodeURIComponent(sig_html)
+  );
   $(this).hide();
   $(link).show();
 });
 
-// update per inputs
+// Odswiezanie wpisywania znaków
 $("#inputs input").keyup(function () {
   var input = $(this).attr("id");
   var val = $(this).val();
