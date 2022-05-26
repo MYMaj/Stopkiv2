@@ -36,14 +36,31 @@ $(".controls > .save").click(function () {
   var sig_html = $(sig_div).html();
   console.log(sig_div);
   //$(link).attr("href", "data:text/html, " + sig_html + ";charset=utf-8,");
-  $(link).attr(
-    "href",
-    "data:text/html, charset=ISO-8859-1;" + encodeURIComponent(sig_html)
-  );
+  $(link).attr("href", "data:text/html,  " + encodeURIComponent(sig_html));
   $(this).hide();
   $(link).show();
 });
 
+// Funkcja łączenia stanowiska ze stanowiskiem po angielsku
+$("#inputs select").click(function () {
+  var select = $(this).attr("id");
+  var val = $(this).val();
+  $("." + select).html(val);
+  if (select === "position") {
+    var optionsPosition = document.getElementById("position");
+    var selectPosition =
+      optionsPosition.options[optionsPosition.selectedIndex].value;
+    console.log(selectPosition);
+
+    if (selectPosition === "Doradca ds. Innowacji") {
+      $(".departament").each(function () {
+        $(".departament").text(`Innovation Specialist`);
+
+        // console.log($(".departament").text(`Doradca ds. Innoaaawacji`));
+      });
+    }
+  }
+});
 // Odswiezanie wpisywania znaków
 $("#inputs input").keyup(function () {
   var input = $(this).attr("id");
@@ -120,4 +137,106 @@ $(document).ready(function () {
   $("#inputs input").keyup(function () {
     $(this).attr("size", $(this).val().length);
   });
+});
+
+var data = {
+  position: [
+    {
+      name: "China",
+      childs: [
+        {
+          name: "Beijing"
+        },
+        {
+          name: "Tianjin",
+          childs: [{ name: "Guangzhou" }, { name: "Shanghai" }]
+        }
+      ]
+    },
+    {
+      name: "India",
+      childs: [
+        {
+          name: "Uttar",
+          childs: [{ name: "Kanpur" }, { name: "Ghaziabad" }]
+        },
+        {
+          name: "Maharashtra",
+          childs: [{ name: "Mumbai" }, { name: "Pune" }]
+        }
+      ]
+    },
+    {
+      name: "USA",
+      childs: [
+        {
+          name: "Washington",
+          childs: [{ name: "Washington" }, { name: "Seatle" }]
+        },
+        {
+          name: "Florida",
+          childs: [{ name: "Orlando" }, { name: "Miamy" }]
+        }
+      ]
+    }
+  ]
+};
+
+function buildSelect(name, data, childs) {
+  var div = $("<div>");
+  div.addClass("hidden autoSelect " + data.name + " " + name);
+  var label = $("<label>");
+  label.text(name);
+  var select = $("<select>");
+  var option = $("<option>");
+  option.text("--");
+  select.append(option);
+  data.childs.forEach(function (child) {
+    option = $("<option>");
+    option.val(child.name);
+    option.text(child.name);
+    select.append(option);
+  });
+  if (childs) select.on("change", updateCities);
+  label.append(select);
+  div.append(label);
+  $(".country").append(div);
+}
+
+function buildForms(data) {
+  data.countries.forEach(function (country) {
+    buildSelect("State", country, true);
+    country.childs.forEach(function (state) {
+      buildSelect("City", state);
+    });
+  });
+}
+
+function hideAutoSelect(name) {
+  $("div.autoSelect." + name).addClass("hidden");
+}
+
+function updateStates() {
+  var v = this.value;
+  if (v) {
+    hideAutoSelect("State");
+    hideAutoSelect("City");
+    var div = $("div.autoSelect." + v);
+    div.removeClass("hidden");
+    var select = $("select", div);
+    if (select.val()) $("div.autoSelect." + select.val()).removeClass("hidden");
+  }
+}
+
+function updateCities() {
+  var v = $(this).val();
+  if (v) {
+    hideAutoSelect("City");
+    $("div.autoSelect." + v).removeClass("hidden");
+  }
+}
+
+$(document).on("ready", function () {
+  buildForms(data);
+  $("[name=country]").on("change", updateStates);
 });

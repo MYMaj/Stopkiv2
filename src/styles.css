@@ -104,3 +104,7 @@ table.center3 {
   margin-right: auto;
   text-align: left;
 }
+
+.hidden {
+  display: none;
+}
