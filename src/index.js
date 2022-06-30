@@ -1,9 +1,27 @@
 import jQuery from "jquery";
 import "./styles.css";
+// **********************************************************************************
+//        ARRAYS
+// Aray with all postitions in polish
+const array_position = [
+  {
+    text: "Doradca ds. Innowacji",
+    value: "Doradca ds. Innowacji"
+  },
+  {
+    text: "Koordynator",
+    value: "Koordynator"
+  }
+];
+
+// Aray with all postitions in english, should match array_position 1to1
+const array_positionENG = ["Inovation Advisor", "Staff Coordinator"];
 
 const $ = jQuery;
-var tagBody = "(?:[^\"'>]|\"[^\"]*\"|'[^']*')*";
 
+// **********************************************************************************
+//        REGEX
+var tagBody = "(?:[^\"'>]|\"[^\"]*\"|'[^']*')*";
 var tagOrComment = new RegExp(
   "<(?:" +
     // Comment body.
@@ -45,6 +63,9 @@ var invalidChars = [
   "$"
 ];
 
+// **********************************************************************************
+//                           FUNCTIONS
+
 // Fucntion to select ranges and copy signature by button
 function selectText(elementId) {
   const node = document.getElementById(elementId);
@@ -83,16 +104,17 @@ $(document).ready(function () {
     $(link).show();
   });
 
-  // Function of selected position to value
+  //New funciton for join positions in ENG
+
   $("#inputs select").click(function () {
     $(".position").text($(this).val());
-    var optionsPosition = $(this).val();
 
-    if (optionsPosition === "Doradca ds. Innowacji") {
-      $(".departament").each(function () {
-        $(".departament").text(`Innovation Specialist`);
-      });
-    }
+    var searchtext = this.options[this.selectedIndex].value;
+    var indexPositionSelect = indexMatchingText(array_position, searchtext);
+
+    $(".departament").each(function () {
+      $(".departament").text(array_positionENG[indexPositionSelect]);
+    });
   });
 
   // Main function with assignig input to values
@@ -191,6 +213,14 @@ $(document).ready(function () {
     $(this).attr("size", $(this).val().length);
   });
 */
+
+  //Generate option list form Array of positions
+  const selectBox = document.querySelector("select");
+
+  for (const o of array_position) {
+    const { text, value, selected } = o;
+    selectBox.options.add(new Option(text, value, selected, selected));
+  }
 });
 // Function to check for html tags in input
 function removeTags(html) {
@@ -263,3 +293,17 @@ $("#phone").bind("paste", function () {
     $("#phone").val(dataFull);
   });
 });
+// Find what index select position have
+
+function indexMatchingText(ele, text) {
+  const result3 = ele.length;
+
+  for (var i = 0; i < result3; i++) {
+    console.log(ele[i]);
+    if (ele[i].text === text) {
+      console.log(text);
+      return i;
+    }
+  }
+  return undefined;
+}
