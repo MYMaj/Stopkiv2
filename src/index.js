@@ -11,11 +11,161 @@ const array_position = [
   {
     text: "Koordynator",
     value: "Koordynator"
-  }
+  },
+  { text: "Kierownik Biura", value: "Kierownik Biura" },
+  {
+    text: "Starszy Kierownik ds. Floty i Transportu ",
+    value: "Starszy Kierownik ds. Floty i Transportu "
+  },
+  {
+    text: "Kierownik ds. Zakwaterowania ",
+    value: "Kierownik ds. Zakwaterowania "
+  },
+  {
+    text: "Starszy Specjalista ds. Zakwaterowania ",
+    value: "Starszy Specjalista ds. Zakwaterowania "
+  },
+  {
+    text: "Specjalista ds. Administracji Personalnej ",
+    value: "Specjalista ds. Administracji Personalnej "
+  },
+  {
+    text: "Kierownik Działu Administracji Personalnej ",
+    value: "Kierownik Działu Administracji Personalnej "
+  },
+  { text: "Recepcjonista ", value: "Recepcjonista " },
+  {
+    text: "Specjalista ds. Controllingu ",
+    value: "Specjalista ds. Controllingu "
+  },
+  { text: "Kierownik ds. Finansów ", value: "Kierownik ds. Finansów " },
+  {
+    text: "Kierownik ds. Rozwoju Biznesu ",
+    value: "Kierownik ds. Rozwoju Biznesu "
+  },
+  { text: "Kierownik ds. Innowacji ", value: "Kierownik ds. Innowacji " },
+  {
+    text: "Młodszy Specjalista ds. Innowacji ",
+    value: "Młodszy Specjalista ds. Innowacji "
+  },
+  { text: "Specjalista ds. IT ", value: "Specjalista ds. IT " },
+
+  { text: "Starszy Programista ", value: "Starszy Programista " },
+  {
+    text: "Specjalista ds. Kadr i Płac ",
+    value: "Specjalista ds. Kadr i Płac "
+  },
+  {
+    text: "Starszy Specjalista ds. Kadr i Płac ",
+    value: "Starszy Specjalista ds. Kadr i Płac "
+  },
+  {
+    text: "Kierownik Działu Kadr i Płac ",
+    value: "Kierownik Działu Kadr i Płac "
+  },
+  {
+    text: "Specjalista ds. Zatrudnienia ",
+    value: "Specjalista ds. Zatrudnienia "
+  },
+  {
+    text: "Specjalista ds. Legalizacji ",
+    value: "Specjalista ds. Legalizacji "
+  },
+  {
+    text: "Starszy Specjalista ds. Legalizacji ",
+    value: "Starszy Specjalista ds. Legalizacji "
+  },
+  {
+    text: "Koordynator Personelu ",
+    value: "Koordynator Personelu "
+  },
+  {
+    text: "Starszy Koordynator Personelu ",
+    value: "Starszy Koordynator Personelu "
+  },
+  {
+    text: "Starszy Kierownik Operacyjny ",
+    value: "Starszy Kierownik Operacyjny "
+  },
+  { text: "Specjalista ds. Rekrutacji ", value: "Specjalista ds. Rekrutacji " },
+  {
+    text: "Starszy Specjalista ds. Rekrutacji ",
+    value: "Starszy Specjalista ds. Rekrutacji "
+  },
+  {
+    text: "Starszy Koordynator Personelu ",
+    value: "Starszy Koordynator Personelu "
+  },
+  { text: "Analityk Czasu Pracy ", value: "Analityk Czasu Pracy " },
+  { text: "Analityk Danych ", value: "Analityk Danych " },
+  {
+    text: "Starszy Prawnik | Specjalista ds. zgodności ",
+    value: "Starszy Prawnik | Specjalista ds. zgodności "
+  },
+  { text: "Kierownik ds. Rekrutacji ", value: "Kierownik ds. Rekrutacji " },
+
+  { text: "Specjalista ds. Rekrutacji ", value: "Specjalista ds. Rekrutacji " },
+  {
+    text: "Starszy Specjalista ds. Rekrutacji ",
+    value: "Starszy Specjalista ds. Rekrutacji "
+  },
+  {
+    text: "Specjalista ds. Marketingu Rekrutacyjnego ",
+    value: "Specjalista ds. Marketingu Rekrutacyjnego "
+  },
+  {
+    text: "Kierownik ds. Organizacji i Administracji ",
+    value: "Kierownik ds. Organizacji i Administracji "
+  },
+  { text: "HR Generalista ", value: "HR Generalista " },
+  { text: "Kierownik Projektu ", value: "Kierownik Projektu " },
+  { text: "Prezes Zarządu ", value: "Prezes Zarządu " },
+  { text: "Dyrektor Zarządzający ", value: "Dyrektor Zarządzający " }
 ];
 
 // Aray with all postitions in english, should match array_position 1to1
-const array_positionENG = ["Inovation Advisor", "Staff Coordinator"];
+const array_positionENG = [
+  "Inovation Advisor",
+  "Staff Coordinator",
+  "Office Manager",
+  "Senior Fleet & Logistics Manager",
+  "Accommodation Manager",
+  "Senior Accommodation Specialist",
+  "Personnel Administration Specialist",
+  "Personnel Administration Manager",
+  "Front Desk Receptionist",
+  "Controlling Specialist",
+  "Finance Manager",
+  "Business Development Manager",
+  "Innovation Manager",
+  "Junior Innovation Specialist",
+  "IT Specialist",
+  "Senior Software Developer",
+  "HR & Payroll Specialist",
+  "Senior HR & Payroll Specialist",
+  "HR & Payroll Manager",
+  "Employment Specialist",
+  "Legalization Specialist",
+  "Senior Legalization Specialist",
+  "Staff Coordinator",
+  "Senior Staff Coordinator",
+  "Senior Operations Manager",
+  "Recruitment Specialist",
+  "Senior Recruitment Specialist",
+  "Senior Staff Coordinator",
+  "Working Time Analyst",
+  "Database Analyst",
+  "Senior Lawyer | Compliance Officer",
+  "Recruitment Manager",
+  "Recruitment Specialist",
+  "Senior Recruitment Specialist",
+  "Recruitment Marketing Specialist",
+  "Organization and Administration Manager",
+  "HR Generalist",
+  "Project Manager",
+  "Chief Executive Officer",
+  "Managing Director"
+];
 
 const $ = jQuery;
 
