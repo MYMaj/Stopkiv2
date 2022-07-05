@@ -203,9 +203,40 @@ var array_position = [
     texteng: "Chief Executive Officer"
   },
   {
-    text: "Dyrektor Zarządzający ",
-    value: "Dyrektor Zarządzający ",
-    texteng: "Managing Director"
+    text: "Młodszy Koordynator Personelu",
+    value: "Młodszy Koordynator Personelu",
+    texteng: "Junior Staff Coordinator"
+  },
+
+  {
+    text: "Młodszy Specjalista ds. Rekrutacji",
+    value: "Młodszy Specjalista ds. Rekrutacji",
+    texteng: "Junior Recruitment Specialist"
+  },
+  {
+    text: "Młodszy Analityk Danych",
+    value: "Młodszy Analityk Danych",
+    texteng: "Junior Data Analyst"
+  },
+  {
+    text: "Młodszy Koordynator Personelu",
+    value: "Młodszy Koordynator Personelu",
+    texteng: "Junior Staff Coordinator"
+  },
+  {
+    text: "Młodszy Trener ds. Wdrożeń",
+    value: "Młodszy Trener ds. Wdrożeń",
+    texteng: "Junior Orientation Trainer"
+  },
+  {
+    text: "Starszy Analityk Danych",
+    value: "Starszy Analityk Danych",
+    texteng: "Senior Data Analyst"
+  },
+  {
+    text: "Młodszy Specjalista ds. Rekrutacji",
+    value: "Młodszy Specjalista ds. Rekrutacji",
+    texteng: "Junior Recruitment Specialist"
   }
 ];
 
