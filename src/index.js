@@ -1,5 +1,5 @@
 import jQuery from "jquery";
-import "./styles.css";
+import "/src/styles.css";
 // **********************************************************************************
 //        ARRAYS
 // Aray with all postitions in polish
@@ -10,11 +10,7 @@ var array_position = [
     value: "Doradca ds. Innowacji",
     texteng: "Inovation Advisor"
   },
-  {
-    text: "Koordynator",
-    value: "Koordynator",
-    texteng: "Staff Coordinator"
-  },
+
   {
     text: "Kierownik Biura",
     value: "Kierownik Biura",
@@ -237,6 +233,16 @@ var array_position = [
     text: "Młodszy Specjalista ds. Rekrutacji",
     value: "Młodszy Specjalista ds. Rekrutacji",
     texteng: "Junior Recruitment Specialist"
+  },
+  {
+    text: "Dyrektor Zarządzający",
+    value: "Dyrektor Zarządzający",
+    texteng: "Managing Director"
+  },
+  {
+    text: "Pełnomocnik Zarządu",
+    value: "Pełnomocnik Zarządu",
+    texteng: "Board Representative"
   }
 ];
 
